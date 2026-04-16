@@ -32,34 +32,6 @@
     overflow: hidden; 
   }
 
-  #settings-overlay {
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(8, 8, 16, 0.98); 
-    backdrop-filter: blur(15px);
-    z-index: 2000;
-    display: none; 
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    animation: fadeIn 0.3s ease;
-  }
-
-  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-
-  .close-settings {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid var(--border);
-    padding: 10px 15px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 20px;
-    color: #fff;
-  }
-
   .header { 
     display: flex; align-items: center; justify-content: space-between; 
     padding: 16px 20px; background: var(--surface); backdrop-filter: blur(10px);
@@ -150,14 +122,6 @@
 </head>
 <body>
 
-<div id="settings-overlay">
-  <button class="close-settings" onclick="toggleSettings(false)">✕</button>
-  <div class="settings-content">
-    <div style="color: var(--orange); font-weight: 900; font-size: 1.5rem; margin-bottom: 10px;">الإعدادات</div>
-    <p style="color: #aaa; margin-top: 10px;">هذه الواجهة قيد التطوير حالياً ⚙️</p>
-  </div>
-</div>
-
 <div class="header">
   <div class="name">𝑩𝑶𝑻 𝒁𝑨5𝑹𝑨𝑭𝑨</div>
   <div class="header-btns">
@@ -170,8 +134,8 @@
     <button class="nav-btn" onclick="clearChat()">
       <img src="https://cdn-icons-png.flaticon.com/128/3334/3334345.png" alt="Delete">
     </button>
-    <button class="nav-btn" onclick="toggleSettings(true)">
-      <img src="https://cdn-icons-png.flaticon.com/128/18976/18976235.png" alt="Settings">
+    <button class="nav-btn" onclick="openBotSite()">
+      <img src="https://images.icon-icons.com/3298/PNG/96/entry_door_open_icon_208681.png" alt="Login">
     </button>
   </div>
 </div>
@@ -225,8 +189,13 @@ const COLORS = [
 
 const SYMBOLS = "☮ɞ✑𖣘☁☂☀☚☛☄☃☸☯☠☢☣☆ღ♫♪♨✿❀❤❣❥❄✎❆ϟ⛇༄࿓✏✁✂☎︎⚙︎⚠︎⚕︎♣♧➊➑ᦂᦦد❥❧❦❤𖣓";
 
-function toggleSettings(show) {
-  document.getElementById("settings-overlay").style.display = show ? "flex" : "none";
+function openBotSite() {
+  const url = "https://abdelahidz1-hash.github.io/BOT-ZA5RAFA-2/";
+  const w = 1200;
+  const h = 800;
+  const left = (screen.width / 2) - (w / 2);
+  const top = (screen.height / 2) - (h / 2);
+  window.open(url, "BotZa5rafa", `width=${w},height=${h},top=${top},left=${left},resizable=yes,scrollbars=yes`);
 }
 
 function cp(text, btn) {
@@ -256,7 +225,7 @@ function decorate(name) {
   const maps = [
     "ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ",
     "Ⓐ⒒ⒸⒹⒺⒻⒼⒽⒾⒿⓀⓁⓂⓃⓄⓅⓆⓇⓈⓉⓊⓋⓌⓍⓎⓏ",
-    "𝐀𝐁𝐂𝐃𝐄𝐅𝐆𝐇𝐈𝐉𝐊𝐋𝐌𝐍𝐎𝐏𝐐𝐑𝐒ＴＵＶＷＸＹ𝐙",
+    "𝐀𝐁𝐂𝐃𝐄𝐅ＧＨＩ𝐉𝐊𝐋𝐌𝐍𝐎𝐏𝐐𝐑𝐒ＴＵＶＷＸＹ𝐙",
     "αвc∂εғgнιjкℓмησpqяsтυνωxүz"
   ];
 
@@ -345,5 +314,4 @@ window.onload = showWelcome;
 document.getElementById("inp").addEventListener("keypress", (e) => { if(e.key === "Enter") send(); });
 </script>
 </body>
-  </html>
-  
+</html>
