@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>𝑩𝑶𝑻 𝒁𝑨5𝑹𝑨𝑭𝑨 - زخرفة أسماء وأكواد</title>
+<title>𝑩𝑶𝑻 𝒁𝑨5𝑹𝑨𝑭𝑨 - زخرفة وألوان</title>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -177,25 +177,28 @@ const NORMAL_CODES = [
 
 const CLAN_NAMES = [
   "ONLYㅤGOATSAㅤ??", "Only legend", "ONLYㅤGangㅤ??", "!ᴿᴱˣㅤBRAZIL", "ＩＱᅠ〆 T E A M",
-  "AD | SUPER Primeﾠﾠ〆 28", "Z  𓆩KAFN𓆪 ˣ", "𓆩O N L Y𓆪 〆9 A L 3 T", "WOLF TENX", "ＪＯＲＤＡＮ"
+  "AD | SUPER Primeﾠﾠ〆 28", "Z  𓆩KAFN𓆪 ˣ", "𓆩O N T Y𓆪 〆9 A L 3 T", "WOLF TENX", "ＪＯＲＤＡＮ"
 ];
 
-const COLORS = [
-  {n: "أحمر", c: "[FF0000]", h: "#FF0000"}, {n: "أخضر", c: "[00FF00]", h: "#00FF00"}, 
-  {n: "أزرق", c: "[0000FF]", h: "#0000FF"}, {n: "أصفر", c: "[FFFF00]", h: "#FFFF00"}, 
-  {n: "بنفسجي", c: "[FF00FF]", h: "#FF00FF"}, {n: "سماوي", c: "[00FFFF]", h: "#00FFFF"}, 
-  {n: "أبيض", c: "[FFFFFF]", h: "#FFFFFF"}, {n: "ذهبي", c: "[FFD700]", h: "#FFD700"}
+const EXTENDED_COLORS = [
+  "#000000","#ff3d00","#991b1b","#2dd4bf","#080808","#ff1744","#b91c1c","#2e1065","#121212","#ff007f",
+  "#dc2626","#4c1d95","#1a1a1a","#ff00ff","#ef4444","#5b21b6","#212121","#d500f9","#f87171","#6d28d9",
+  "#2c2c2c","#bc13fe","#fca5a5","#7c3aed","#333333","#6200ea","#fecaca","#8b5cf6","#424242","#304ffe",
+  "#fee2e2","#a78bfa","#555555","#2979ff","#831843","#c4b5fd","#666666","#00b0ff","#9d174d","#ddd6fe",
+  "#757575","#00e676","#be185d","#ede9fe","#888888","#1de9b6","#db2777","#422006","#9e9e9e","#00bfa5",
+  "#ec4899","#713f12","#bdbdbd","#0a192f","#f472b6","#854d0e","#d1d5db","#172a45","#064e3b","#a16207",
+  "#e0e0e0","#303c55","#065f46","#ca8a04","#eeeeee","#112240","#047857","#eab308","#f5f5f5","#1f2937",
+  "#059669","#facc15","#fafafa","#374151","#10b981","#fde047","#ffffff","#1e3a8a","#34d399","#fef08a",
+  "#00f3ff","#1d4ed8","#6ee7b7","#fefce8","#00e5ff","#2563eb","#a7f3d0","#7c2d12","#39ff14","#3b82f6",
+  "#d1fae5","#9a3412","#ccff00","#60a5fa","#ecfdf5","#c2410c","#ffff00","#93c5fd","#134e4a","#ea580c",
+  "#ffea00","#bfdbfe","#115e59","#f97316","#ffc107","#dbeafe","#0f766e","#fb923c","#ff9800","#450a0a",
+  "#0d9488","#ff5722","#7f1d1d","#14b8a6"
 ];
 
 const SYMBOLS = "☮ɞ✑𖣘☁☂☀☚☛☄☃☸☯☠☢☣☆ღ♫♪♨✿❀❤❣❥❄✎❆ϟ⛇༄࿓✏✁✂☎︎⚙︎⚠︎⚕︎♣♧➊➑ᦂᦦد❥❧❦❤𖣓";
 
 function openBotSite() {
-  const url = "https://abdelahidz1-hash.github.io/BOT-ZA5RAFA-2/";
-  const w = 1200;
-  const h = 800;
-  const left = (screen.width / 2) - (w / 2);
-  const top = (screen.height / 2) - (h / 2);
-  window.open(url, "BotZa5rafa", `width=${w},height=${h},top=${top},left=${left},resizable=yes,scrollbars=yes`);
+  window.open("https://abdelahidz1-hash.github.io/BOT-ZA5RAFA-2/", "BotZa5rafa", "width=1200,height=800");
 }
 
 function cp(text, btn) {
@@ -221,20 +224,19 @@ function clearChat() {
 }
 
 function decorate(name) {
-  const alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
   const maps = [
-    "ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ",
-    "Ⓐ⒒ⒸⒹⒺⒻⒼⒽⒾⒿⓀⓁⓂⓃⓄⓅⓆⓇⓈⓉⓊⓋⓌⓍⓎⓏ",
-    "𝐀𝐁𝐂𝐃𝐄𝐅ＧＨＩ𝐉𝐊𝐋𝐌𝐍𝐎𝐏𝐐𝐑𝐒ＴＵＶＷＸＹ𝐙",
-    "αвc∂εғgнιjкℓмησpqяsтυνωxүz"
+    "𝐀𝐁𝐂𝐃𝐄𝐅𝐆𝐇𝐈𝐉𝐊𝐋𝐌𝐍𝐎𝐏Ｑ𝐑𝐒ＴＵＶ𝐖𝐗𝐘𝐙𝐚𝐛𝐜𝐝𝐞𝐟𝐠𝐡𝐢𝐣𝐤𝐥𝐦𝐧𝐨𝐩𝐪𝐫𝐬𝐭𝐮𝐯ｗ𝐱𝐲𝐳",
+    "𝗔𝗕𝗖𝗗𝗘𝗙𝗚𝗛𝗜𝗝𝗞𝐋𝗠𝗡𝗢𝗣𝗤𝗥𝗦𝗧𝗨𝗩𝗪𝗫𝗬𝗭𝗮𝗯𝗰𝗱𝗲𝗳𝗴𝗵𝗶ජ𝗸𝗹𝕞𝗻𝗼𝗽𝗾𝗿𝘀𝘁𝘂𝘃𝘄𝘅𝘆𝘇",
+    "𝑨𝑩𝑪𝑫𝑬𝑭𝑮𝑯𝑰𝑱𝑲𝑳𝑴𝑵𝑶𝑷𝑸𝑹𝑺𝑻𝑼𝑽𝑾𝑿𝒀𝒁𝒂𝒃𝒄𝒅𝒆𝒇𝒈𝒉𝒊𝒋𝒌𝑳𝒎𝒏𝒐𝒑𝒒𝒓𝒔𝒕𝒖𝒗𝒘𝒙𝒚𝒛"
   ];
-
   let results = "";
   maps.forEach(m => {
     let d = "";
+    let mapChars = Array.from(m);
     for(let char of name){
-      let idx = alpha.indexOf(char.toUpperCase());
-      d += (idx > -1) ? Array.from(m)[idx] : char;
+      let idx = alpha.indexOf(char);
+      d += (idx > -1 && mapChars[idx]) ? mapChars[idx] : char;
     }
     results += `<div class="style-row"><span>${d}</span><button class="cp" onclick="cp('${d}', this)"><img src="${COPY_ICON}"></button></div>`;
   });
@@ -255,10 +257,7 @@ function send() {
   const inp = document.getElementById("inp");
   let val = inp.value.trim(); if (!val) return;
   
-  const toCircleNumbers = (text) => {
-    return text.replace(/1/g, "❶").replace(/2/g, "➋").replace(/3/g, "➌").replace(/4/g, "➍").replace(/5/g, "➎");
-  };
-
+  const toCircleNumbers = (text) => text.replace(/1/g, "❶").replace(/2/g, "➋").replace(/3/g, "➌").replace(/4/g, "➍").replace(/5/g, "➎");
   const normalizedVal = val.replace(/❶/g, "1").replace(/➋/g, "2").replace(/➌/g, "3").replace(/➍/g, "4").replace(/➎/g, "5");
 
   const chat = document.getElementById("chat");
@@ -282,13 +281,21 @@ function send() {
       botReply(`الأكواد العادية:<br>${nHtml}`); state = "idle";
     }
   } else if (state === "waiting_color_name") {
-    let cHtml = "";
-    COLORS.forEach(c => {
-      cHtml += `<div class="style-row"><span style="color: ${c.h};">${val}</span><button class="cp" onclick="cp('${c.c}${val}', this)"><img src="${COPY_ICON}"></button></div>`;
+    let cHtml = `<div style="max-height: 300px; overflow-y: auto; padding-right: 5px;">`;
+    EXTENDED_COLORS.forEach(hex => {
+      const ffColor = `[${hex.replace("#", "").toUpperCase()}]`;
+      cHtml += `<div class="style-row">
+                  <span style="color: ${hex};">${val}</span>
+                  <button class="cp" onclick="cp('${ffColor}${val}', this)"><img src="${COPY_ICON}"></button>
+                </div>`;
     });
-    botReply(`اسمك بالألوان (انسخ الكود جاهزاً):<br>${cHtml}`); state = "idle";
+    cHtml += `</div>`;
+    botReply(`تم تلوين اسمك:<br>${cHtml}`); 
+    state = "idle";
   } else if (normalizedVal === "1") {
-    botReply(`<div class="style-row"><span>اسم فارغ</span><button class="cp" onclick="cp('ㅤ', this)"><img src="${COPY_ICON}"></button></div>`);
+    botReply(`الأسماء الفارغة:<br>
+      <div class="style-row"><span>ㅤ </span><button class="cp" onclick="cp('ㅤ', this)"><img src="${COPY_ICON}"></button></div>
+      <div class="style-row"><span>ㅤ ㅤ </span><button class="cp" onclick="cp('ㅤ ㅤ', this)"><img src="${COPY_ICON}"></button></div>`);
   } else if (normalizedVal === "2") {
     let sHtml = "";
     for(let s of SYMBOLS) sHtml += `<button class="symbol-btn" onclick="cp('${s}', this)">${s}</button>`;
@@ -314,5 +321,5 @@ window.onload = showWelcome;
 document.getElementById("inp").addEventListener("keypress", (e) => { if(e.key === "Enter") send(); });
 </script>
 </body>
-  </html>
-                                               
+    </html>
+  
