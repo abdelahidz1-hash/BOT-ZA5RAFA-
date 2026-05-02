@@ -11,7 +11,12 @@
   
   body { font-family: 'Cairo', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 20px; font-weight: 400; }
   
-  header { width: 100%; max-width: 500px; text-align: center; margin: 20px 0 40px; }
+  /* تنسيق زر الرجوع الجديد */
+  .back-nav { width: 100%; max-width: 500px; display: flex; justify-content: flex-start; margin-bottom: 10px; }
+  .btn-back { background: var(--surface); color: var(--gold); border: 1px solid var(--border); padding: 8px 20px; border-radius: 12px; text-decoration: none; font-size: 14px; transition: 0.3s; display: flex; align-items: center; gap: 8px; }
+  .btn-back:hover { background: var(--border); }
+
+  header { width: 100%; max-width: 500px; text-align: center; margin: 10px 0 40px; }
   
   .sub-title { font-weight: 400; color: #ffffff; font-size: 14px; margin-bottom: 10px; display: block; }
   p { font-weight: 400; }
@@ -40,6 +45,12 @@
 </style>
 </head>
 <body>
+
+<nav class="back-nav">
+  <a href="https://abdelahi-apps1.netlify.app/" class="btn-back">
+    <span>&#10095;</span> رجوع
+  </a>
+</nav>
 
 <header>
   <div class="top-banner">
@@ -126,7 +137,6 @@
     sendBtn.disabled = true;
     sendBtn.innerText = "جاري الإرسال...";
 
-    // مراجعة الوقت والتاريخ
     const now = new Date();
     const dateStr = `${now.getFullYear()}/${now.getMonth() + 1}/${now.getDate()}`;
     const timeStr = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
@@ -176,4 +186,5 @@
   }
 </script>
 </body>
-</html>
+ </html>
+ 
