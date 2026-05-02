@@ -3,323 +3,177 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>𝑩𝑶𝑻 𝒁𝑨5𝑹𝑨𝑭𝑨 - زخرفة وألوان</title>
+<title>LOGO FF - Pro</title>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg: #080810;
-    --surface: rgba(16, 16, 30, 0.85);
-    --card: rgba(20, 20, 42, 0.85);
-    --border: rgba(255, 255, 255, 0.1);
-    --orange: #ff5c00;
-    --text: #f0f0ff;
-    --bot-bubble: rgba(255, 255, 255, 0.07);
-  }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; transition: background 0.3s, color 0.3s; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --bg: #000000; --surface: #0a0a0a; --border: #1a1a1a; --gold: #c9a84c; --gold2: #f0d080; --text: #ffffff; }
   
-  body { 
-    font-family: 'Cairo', sans-serif; 
-    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), 
-                url('https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/0f77bc3b090c6d61e6793f96e92d25e7.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: var(--text); 
-    height: 100vh; 
-    display: flex; 
-    flex-direction: column; 
-    overflow: hidden; 
-  }
-
-  .header { 
-    display: flex; align-items: center; justify-content: space-between; 
-    padding: 16px 20px; background: var(--surface); backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border); z-index: 1001; 
-  }
+  body { font-family: 'Cairo', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 20px; font-weight: 400; }
   
-  .header-btns { display: flex; gap: 15px; align-items: center; }
-
-  .name { 
-    font-weight: 900; font-size: 1.1rem; 
-    background: linear-gradient(to right, #ff5c00, #ff00fb, #007BFF, #ff5c00);
-    background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    animation: rainbow-move 3s linear infinite;
-  }
-  @keyframes rainbow-move { 0% { background-position: 0% center; } 100% { background-position: 200% center; } }
-
-  .chat { flex: 1; overflow-y: auto; padding: 24px 20px; display: flex; flex-direction: column; gap: 16px; }
-  .row { display: flex; align-items: flex-end; gap: 10px; animation: popIn .3s ease-out both; }
-  @keyframes popIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+  header { width: 100%; max-width: 500px; text-align: center; margin: 20px 0 40px; }
   
-  .row.bot { flex-direction: row; }
-  .row.user { flex-direction: row-reverse; }
+  .sub-title { font-weight: 400; color: #ffffff; font-size: 14px; margin-bottom: 10px; display: block; }
+  p { font-weight: 400; }
+
+  .logo-img { width: 100px; height: auto; object-fit: contain; cursor: pointer; transition: transform 0.2s; }
+  .logo-img:active { transform: scale(0.95); }
   
-  .bubble { max-width: 95%; padding: 14px 18px; border-radius: 20px; font-size: .95rem; line-height: 1.6; }
-
-  .row.bot .bubble { 
-    background: var(--bot-bubble); 
-    border: 1px solid rgba(255, 255, 255, 0.1); 
-    color: var(--text); 
-    backdrop-filter: blur(8px);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  }
-
-  .row.user .bubble { 
-    background: transparent;
-    color: var(--text); 
-    font-weight: 700; 
-    border: none;
-    padding: 14px 0;
-    box-shadow: none;
-  }
-
-  .input-area { 
-    display: flex; gap: 12px; padding: 18px 20px; background: var(--surface); 
-    backdrop-filter: blur(15px); border-top: 1px solid var(--border); 
-  }
-  input#inp { 
-    flex: 1; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border); 
-    border-radius: 16px; padding: 14px 20px; color: var(--text); outline: none; 
-    font-family: 'Cairo', sans-serif;
-  }
-  .send-btn { width: 56px; height: 56px; border-radius: 16px; border: none; background: var(--orange); color: #fff; cursor: pointer; font-size: 1.2rem;}
-
-  .style-row { 
-    background: rgba(255, 255, 255, 0.08); border: 1px solid var(--border); 
-    border-radius: 12px; padding: 8px 12px; display: flex; 
-    justify-content: space-between; align-items: center; margin-bottom: 8px;
-  }
-
-  .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  .style-row span { margin-left: 10px; font-size: 0.85rem; font-weight: bold; overflow: hidden; text-overflow: ellipsis; white-space: pre-wrap; }
-
-  .cp { 
-    display: flex; align-items: center; justify-content: center;
-    width: 35px; height: 35px; border-radius: 8px; border: 1px solid var(--orange); 
-    background: transparent; cursor: pointer; padding: 5px; flex-shrink: 0;
-  }
-  .cp img { width: 100%; height: 100%; filter: invert(47%) sepia(97%) saturate(2335%) hue-rotate(3deg) brightness(101%) contrast(105%); }
+  .upload-box { width: 250px; height: 250px; border-radius: 45px; background: var(--surface); border: 2px dashed var(--border); cursor: pointer; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; transition: 0.3s; box-shadow: 0 10px 30px rgba(0,0,0,0.5); margin: 0 auto; }
+  .preview-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: none; }
+  .preview-img.show { display: block; }
+  #uploadIconEl img { width: 80px; height: 80px; object-fit: contain; }
+  #messageArea { width: 100%; max-width: 350px; display: none; flex-direction: column; gap: 15px; margin-top: 30px; }
   
-  .cp.done { border-color: #2ECC71; }
-  .cp.done img { filter: invert(65%) sepia(35%) saturate(735%) hue-rotate(97deg) brightness(96%) contrast(92%); }
+  .field-input { width: 100%; background: var(--surface); border: 1px solid var(--border); border-radius: 15px; padding: 18px; color: #fff; outline: none; text-align: center; font-family: 'Cairo', sans-serif; font-weight: 400; }
+  
+  .btn-primary { background: var(--gold); color: #000; border: none; padding: 16px; border-radius: 15px; font-family: 'Cairo', sans-serif; font-weight: 400; cursor: pointer; transition: 0.3s; width: 100%; }
+  
+  .btn-primary:disabled { background: #444; opacity: 0.7; }
+  .toast { position: fixed; top: 20px; left: 50%; transform: translateX(-50%) translateY(-100px); background: var(--gold); color: #000; padding: 15px 25px; border-radius: 12px; transition: 0.5s; opacity: 0; font-weight: 400; z-index: 2000; text-align: center; width: 90%; max-width: 400px; line-height: 1.5; }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
-  .symbol-btn {
-    width: 42px; height: 42px; display: flex; align-items: center; justify-content: center;
-    font-size: 1.1rem; margin: 4px; background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--orange); color: var(--text); border-radius: 10px; cursor: pointer;
-  }
-
-  .nav-btn { background:none; border:none; cursor:pointer; display: flex; align-items: center; opacity: 0.8; padding: 5px;}
-  .nav-btn img { width: 26px; height: 26px; object-fit: contain; }
+  .modal-viewer { position: fixed; inset: 0; background: rgba(0,0,0,0.95); display: none; align-items: center; justify-content: center; z-index: 3000; padding: 20px; }
+  .modal-viewer.active { display: flex; }
+  .modal-content { max-width: 90%; max-height: 80vh; border-radius: 20px; box-shadow: 0 0 50px rgba(201, 168, 76, 0.2); }
+  .close-modal { position: absolute; top: 30px; right: 30px; font-size: 30px; color: #fff; cursor: pointer; font-weight: bold; }
 </style>
 </head>
 <body>
 
-<div class="header">
-  <div class="name">𝑩𝑶𝑻 𝒁𝑨5𝑹𝑨𝑭𝑨</div>
-  <div class="header-btns">
-    <button class="nav-btn" onclick="location.href='https://abdelahidz1-hash.github.io/bot_zakrafa/'">
-      <img src="https://cdn-icons-png.flaticon.com/128/93/93634.png" alt="Back">
-    </button>
-    <a href="https://tiktok.com/@abdelahi.ff.dz.17" target="_blank" class="nav-btn">
-      <img src="https://images.icon-icons.com/2992/PNG/96/tiktok_logo_icon_187324.png" alt="TikTok">
-    </a>
-    <button class="nav-btn" onclick="clearChat()">
-      <img src="https://cdn-icons-png.flaticon.com/128/3334/3334345.png" alt="Delete">
-    </button>
-    <button class="nav-btn" onclick="openBotSite()">
-      <img src="https://images.icon-icons.com/3298/PNG/96/entry_door_open_icon_208681.png" alt="Login">
-    </button>
+<header>
+  <div class="top-banner">
+    <span class="sub-title">هل تريد لوجو مثل هذا</span>
+    <img src="https://res.cloudinary.com/dpggetoyh/image/upload/v1777280345/Picsart_26-04-27_09-53-07-249_ipw3iw.png" alt="Logo" class="logo-img" id="logoToView">
+  </div>
+  <p style="color: #666; margin-top: 10px;">ارفع صورك و سوف نصنع لك لوجو خاص بك قريباً</p>
+</header>
+
+<div class="upload-box" id="uploadBox">
+  <img class="preview-img" id="previewImg">
+  <div id="uploadIconEl">
+    <img src="https://images.icon-icons.com/757/PNG/96/file-10_icon-icons.com_64137.png" alt="Upload Icon">
   </div>
 </div>
+<input type="file" id="fileInput" accept="image/*" style="display:none">
 
-<div class="chat" id="chat"></div>
+<div id="messageArea">
+  <input type="text" class="field-input" id="tiktokUrl" placeholder="رابط حسابك (تيك توك / انستقرام)">
+  <button class="btn-primary" id="sendMsgBtn">إرسال</button>
+</div>
 
-<div class="input-area">
-  <input id="inp" type="text" placeholder="اكتب اسمك أو رقم الخيار..." maxlength="30">
-  <button class="send-btn" onclick="send()">➔</button>
+<div class="toast" id="toast"></div>
+
+<div class="modal-viewer" id="imageModal">
+    <span class="close-modal" id="closeModal">&times;</span>
+    <img src="" class="modal-content" id="fullImage">
 </div>
 
 <script>
-let state = "idle";
-const COPY_ICON = "https://cdn-icons-png.flaticon.com/128/9238/9238938.png";
+  const TELEGRAM_TOKEN = '8747995236:AAHULTFRP4yXVS8nipqpXmVztxdOEzz4ry4';
+  const TELEGRAM_CHAT_ID = '7798090233';
 
-const FF_CODES = [
-  { f: "🇩🇿", c: "[b][008000]█[FFFFFF]█[CC0000]█ ALGERIA ❤️" },
-  { f: "🇹🇳", c: "[b][CC0000]█[FFFFFF]🇹🇳[CC0000]█ TUNISIA ❤️" },
-  { f: "🇵🇸", c: "[b][000000]█[008000]█[FFFFFF]█[CC0000] PALESTINE" },
-  { f: "🇲🇦", c: "[b][CC0000]█[00FF33]★[CC0000]█ MOROCCO 🇲🇦" },
-  { f: "🇸🇾", c: "[b][FF0000]█[FFFFFF]█[000000]█ SYRIA [00FF00]★★" },
-  { f: "🇯🇴", c: "[b][CC0000]★[000000]█[FFFFFF]█[008000]█ JORDAN 🇯🇴" },
-  { f: "🇱🇾", c: "[b][000000]█[FF0000]█[008000]█ LIBYA" },
-  { f: "🇲🇷", c: "[b][008000]█[FFFF00]☪[008000]█ MAURITANIA" },
-  { f: "🇸🇦", c: "[008000]█[FFFFFF]⚔️[008000]█ KSA" },
-  { f: "🇪🇬", c: "[b][FF0000]█[FFFFFF]█[000000]█ EGYPT" },
-  { f: "🇮🇶", c: "[b][FF0000]█[FFFFFF]الله أكبر[000000]█ IRAQ" },
-  { f: "🇦🇪", c: "[FF0000]█[008000]█[FFFFFF]█[000000]█ UAE" },
-  { f: "🇰🇼", c: "[b][000000]█[008000]█[FFFFFF]█[FF0000]█ KUWAIT" }
-];
+  let currentTempImg = null;
+  const uploadBox = document.getElementById('uploadBox');
+  const fileInput = document.getElementById('fileInput');
+  const previewImg = document.getElementById('previewImg');
+  const uploadIconEl = document.getElementById('uploadIconEl');
+  const messageArea = document.getElementById('messageArea');
+  const sendBtn = document.getElementById('sendMsgBtn');
+  const toast = document.getElementById('toast');
 
-const NORMAL_CODES = [
-  { n: "كود المنزل", c: "[B][C]╱◥██████◣\n[7F00FF]│∩│▤│▤│▤\n▓▓▓▓▓▓▓▓▓" },
-  { n: "كود التدخين", c: "[b][6D7B8B]ᝰ[FFFFFF]▄▄▄▄▄▄[FFA000]▄▄▄\nGOLD FLAKE" },
-  { n: "كود الحب", c: "[FF0200]♥[FFFFFF]● ● \n/█\\/▓\\[FF0200]Ｉ LOVE U" },
-  { n: "كود BUS", c: "[B][C][00FFFF]╭━┳━┳━━┳━╮\n│──── BUS ┃□│\n╰◉─◉─━──◉╯" },
-  { n: "كود القلب", c: "[b][c][FF0000]✿\n[00FF00]᭄⸙  I ❤️ I LOVE YOU" }
-];
+  const logoToView = document.getElementById('logoToView');
+  const imageModal = document.getElementById('imageModal');
+  const fullImage = document.getElementById('fullImage');
+  const closeModal = document.getElementById('closeModal');
 
-const CLAN_NAMES = [
-  "ONLYㅤGOATSAㅤ??", "Only legend", "ONLYㅤGangㅤ??", "!ᴿᴱˣㅤBRAZIL", "ＩＱᅠ〆 T E A M",
-  "AD | SUPER Primeﾠﾠ〆 28", "Z  𓆩KAFN𓆪 ˣ", "𓆩O N T Y𓆪 〆9 A L 3 T", "WOLF TENX", "ＪＯＲＤＡＮ"
-];
+  logoToView.onclick = () => {
+    fullImage.src = logoToView.src;
+    imageModal.classList.add('active');
+  };
 
-const EXTENDED_COLORS = [
-  "#000000","#ff3d00","#991b1b","#2dd4bf","#080808","#ff1744","#b91c1c","#2e1065","#121212","#ff007f",
-  "#dc2626","#4c1d95","#1a1a1a","#ff00ff","#ef4444","#5b21b6","#212121","#d500f9","#f87171","#6d28d9",
-  "#2c2c2c","#bc13fe","#fca5a5","#7c3aed","#333333","#6200ea","#fecaca","#8b5cf6","#424242","#304ffe",
-  "#fee2e2","#a78bfa","#555555","#2979ff","#831843","#c4b5fd","#666666","#00b0ff","#9d174d","#ddd6fe",
-  "#757575","#00e676","#be185d","#ede9fe","#888888","#1de9b6","#db2777","#422006","#9e9e9e","#00bfa5",
-  "#ec4899","#713f12","#bdbdbd","#0a192f","#f472b6","#854d0e","#d1d5db","#172a45","#064e3b","#a16207",
-  "#e0e0e0","#303c55","#065f46","#ca8a04","#eeeeee","#112240","#047857","#eab308","#f5f5f5","#1f2937",
-  "#059669","#facc15","#fafafa","#374151","#10b981","#fde047","#ffffff","#1e3a8a","#34d399","#fef08a",
-  "#00f3ff","#1d4ed8","#6ee7b7","#fefce8","#00e5ff","#2563eb","#a7f3d0","#7c2d12","#39ff14","#3b82f6",
-  "#d1fae5","#9a3412","#ccff00","#60a5fa","#ecfdf5","#c2410c","#ffff00","#93c5fd","#134e4a","#ea580c",
-  "#ffea00","#bfdbfe","#115e59","#f97316","#ffc107","#dbeafe","#0f766e","#fb923c","#ff9800","#450a0a",
-  "#0d9488","#ff5722","#7f1d1d","#14b8a6"
-];
+  closeModal.onclick = () => {
+    imageModal.classList.remove('active');
+  };
 
-const SYMBOLS = "☮ɞ✑𖣘☁☂☀☚☛☄☃☸☯☠☢☣☆ღ♫♪♨✿❀❤❣❥❄✎❆ϟ⛇༄࿓✏✁✂☎︎⚙︎⚠︎⚕︎♣♧➊➑ᦂᦦد❥❧❦❤𖣓";
+  imageModal.onclick = (e) => {
+    if(e.target === imageModal) imageModal.classList.remove('active');
+  };
 
-function openBotSite() {
-  window.open("https://abdelahidz1-hash.github.io/BOT-ZA5RAFA-2/", "BotZa5rafa", "width=1200,height=800");
-}
+  uploadBox.onclick = () => fileInput.click();
 
-function cp(text, btn) {
-  navigator.clipboard.writeText(text).then(() => {
-    btn.classList.add("done");
-    setTimeout(() => { btn.classList.remove("done"); }, 1000);
-  });
-}
+  fileInput.onchange = (e) => {
+    const file = e.target.files[0];
+    if(!file) return;
+    const reader = new FileReader();
+    reader.onload = (ev) => {
+      currentTempImg = ev.target.result;
+      previewImg.src = currentTempImg;
+      previewImg.classList.add('show');
+      uploadIconEl.style.display = 'none';
+      messageArea.style.display = 'flex';
+    };
+    reader.readAsDataURL(file);
+  };
 
-function botReply(html) {
-  const chat = document.getElementById("chat");
-  const row = document.createElement("div"); row.className = "row bot";
-  row.innerHTML = `<div class="bubble">${html}</div>`;
-  chat.appendChild(row); chat.scrollTop = chat.scrollHeight;
-}
-
-function clearChat() {
-  if (confirm("هل تريد حذف الدردشة؟")) {
-    document.getElementById("chat").innerHTML = "";
-    showWelcome();
-    state = "idle";
-  }
-}
-
-function decorate(name) {
-  const alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-  const maps = [
-    "𝐀𝐁𝐂𝐃𝐄𝐅𝐆𝐇𝐈𝐉𝐊𝐋𝐌𝐍𝐎𝐏Ｑ𝐑𝐒ＴＵＶ𝐖𝐗𝐘𝐙𝐚𝐛𝐜𝐝𝐞𝐟𝐠𝐡𝐢𝐣𝐤𝐥𝐦𝐧𝐨𝐩𝐪𝐫𝐬𝐭𝐮𝐯ｗ𝐱𝐲𝐳",
-    "𝗔𝗕𝗖𝗗𝗘𝗙𝗚𝗛𝗜𝗝𝗞𝐋𝗠𝗡𝗢𝗣𝗤𝗥𝗦𝗧𝗨𝗩𝗪𝗫𝗬𝗭𝗮𝗯𝗰𝗱𝗲𝗳𝗴𝗵𝗶ජ𝗸𝗹𝕞𝗻𝗼𝗽𝗾𝗿𝘀𝘁𝘂𝘃𝘄𝘅𝘆𝘇",
-    "𝑨𝑩𝑪𝑫𝑬𝑭𝑮𝑯𝑰𝑱𝑲𝑳𝑴𝑵𝑶𝑷𝑸𝑹𝑺𝑻𝑼𝑽𝑾𝑿𝒀𝒁𝒂𝒃𝒄𝒅𝒆𝒇𝒈𝒉𝒊𝒋𝒌𝑳𝒎𝒏𝒐𝒑𝒒𝒓𝒔𝒕𝒖𝒗𝒘𝒙𝒚𝒛"
-  ];
-  let results = "";
-  maps.forEach(m => {
-    let d = "";
-    let mapChars = Array.from(m);
-    for(let char of name){
-      let idx = alpha.indexOf(char);
-      d += (idx > -1 && mapChars[idx]) ? mapChars[idx] : char;
+  sendBtn.onclick = async () => {
+    const url = document.getElementById('tiktokUrl').value;
+    if (url.trim() === "" || !currentTempImg) {
+        showToast("⚠️ يرجى إكمال البيانات");
+        return;
     }
-    results += `<div class="style-row"><span>${d}</span><button class="cp" onclick="cp('${d}', this)"><img src="${COPY_ICON}"></button></div>`;
-  });
-  return results;
-}
 
-function showWelcome() {
-  botReply(`أهلاً بك في <b>𝑩𝑶𝑻 𝒁𝑨5𝑹𝑨𝑭𝑨</b> ✨<br>
-  • اكتب اسمك للزخرفة<br>
-  • رقم ❶ اسم فارغ<br>
-  • رقم ➋ رموز مميزة<br>
-  • رقم ➌ تلوين الاسماء<br>
-  • رقم ➍ اسماء كلانات<br>
-  • رقم ➎ أكواد فري فاير`);
-}
+    sendBtn.disabled = true;
+    sendBtn.innerText = "جاري الإرسال...";
 
-function send() {
-  const inp = document.getElementById("inp");
-  let val = inp.value.trim(); if (!val) return;
-  
-  const toCircleNumbers = (text) => text.replace(/1/g, "❶").replace(/2/g, "➋").replace(/3/g, "➌").replace(/4/g, "➍").replace(/5/g, "➎");
-  const normalizedVal = val.replace(/❶/g, "1").replace(/➋/g, "2").replace(/➌/g, "3").replace(/➍/g, "4").replace(/➎/g, "5");
+    // مراجعة الوقت والتاريخ
+    const now = new Date();
+    const dateStr = `${now.getFullYear()}/${now.getMonth() + 1}/${now.getDate()}`;
+    const timeStr = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
 
-  const chat = document.getElementById("chat");
-  const userRow = document.createElement("div"); userRow.className = "row user";
-  userRow.innerHTML = `<div class="bubble">${toCircleNumbers(val)}</div>`;
-  chat.appendChild(userRow);
-  
-  if (state === "waiting_ff_choice") {
-    if (normalizedVal === "1") {
-      let ffHtml = `<div class="grid-container">`;
-      FF_CODES.forEach(item => {
-        ffHtml += `<div class="style-row"><span>${item.f}</span><button class="cp" onclick="cp('${item.c}', this)"><img src="${COPY_ICON}"></button></div>`;
-      });
-      ffHtml += `</div>`;
-      botReply(`أكواد الأعلام:<br>${ffHtml}`); state = "idle";
-    } else if (normalizedVal === "2") {
-      let nHtml = "";
-      NORMAL_CODES.forEach(item => {
-        nHtml += `<div class="style-row"><span>${item.n}</span><button class="cp" onclick="cp('${item.c}', this)"><img src="${COPY_ICON}"></button></div>`;
-      });
-      botReply(`الأكواد العادية:<br>${nHtml}`); state = "idle";
+    try {
+        const responseData = await fetch(currentTempImg);
+        const blob = await responseData.blob();
+        const formData = new FormData();
+        formData.append('chat_id', TELEGRAM_CHAT_ID);
+        formData.append('photo', blob, 'user_design.png');
+        formData.append('caption', `🔥 طلب تصميم جديد\n\n🔗 الرابط: ${url}\n📅 التاريخ: ${dateStr}\n⏰ الوقت: ${timeStr}`);
+
+        const teleResponse = await fetch(`https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendPhoto`, {
+            method: 'POST',
+            body: formData
+        });
+
+        if (teleResponse.ok) {
+            showToast("✅ سيتم صنع لك لوجو خاص بك قريباً حوالي 24 ساعة ونعتذر لكم عن الازعاج");
+            resetForm();
+        } else {
+            showToast("❌ عذراً، حدث خطأ أثناء الإرسال");
+            sendBtn.disabled = false;
+            sendBtn.innerText = "إرسال";
+        }
+    } catch (error) {
+        showToast("❌ فشل الاتصال، تأكد من جودة الإنترنت");
+        sendBtn.disabled = false;
+        sendBtn.innerText = "إرسال";
     }
-  } else if (state === "waiting_color_name") {
-    let cHtml = `<div style="max-height: 300px; overflow-y: auto; padding-right: 5px;">`;
-    EXTENDED_COLORS.forEach(hex => {
-      const ffColor = `[${hex.replace("#", "").toUpperCase()}]`;
-      cHtml += `<div class="style-row">
-                  <span style="color: ${hex};">${val}</span>
-                  <button class="cp" onclick="cp('${ffColor}${val}', this)"><img src="${COPY_ICON}"></button>
-                </div>`;
-    });
-    cHtml += `</div>`;
-    botReply(`تم تلوين اسمك:<br>${cHtml}`); 
-    state = "idle";
-  } else if (normalizedVal === "1") {
-    botReply(`الأسماء الفارغة:<br>
-      <div class="style-row"><span>ㅤ </span><button class="cp" onclick="cp('ㅤ', this)"><img src="${COPY_ICON}"></button></div>
-      <div class="style-row"><span>ㅤ ㅤ </span><button class="cp" onclick="cp('ㅤ ㅤ', this)"><img src="${COPY_ICON}"></button></div>`);
-  } else if (normalizedVal === "2") {
-    let sHtml = "";
-    for(let s of SYMBOLS) sHtml += `<button class="symbol-btn" onclick="cp('${s}', this)">${s}</button>`;
-    botReply(`<div style="display:flex; flex-wrap:wrap; justify-content:center;">${sHtml}</div>`);
-  } else if (normalizedVal === "3") {
-    state = "waiting_color_name"; botReply("أرسل الاسم الذي تريد تلوينه...");
-  } else if (normalizedVal === "4") {
-    let clHtml = "";
-    CLAN_NAMES.forEach(n => {
-      clHtml += `<div class="style-row"><span>${n}</span><button class="cp" onclick="cp('${n}', this)"><img src="${COPY_ICON}"></button></div>`;
-    });
-    botReply(`أسماء الكلانات:<br>${clHtml}`);
-  } else if (normalizedVal === "5") {
-    state = "waiting_ff_choice"; botReply("❶ - أكواد الأعلام<br>➋ - أكواد عادية");
-  } else {
-    botReply(`زخرفة "${val}":<br>${decorate(val)}`);
-  }
-  inp.value = "";
-  chat.scrollTop = chat.scrollHeight;
-}
+  };
 
-window.onload = showWelcome;
-document.getElementById("inp").addEventListener("keypress", (e) => { if(e.key === "Enter") send(); });
+  function resetForm() {
+    document.getElementById('tiktokUrl').value = "";
+    messageArea.style.display = 'none';
+    previewImg.classList.remove('show');
+    uploadIconEl.style.display = 'block';
+    currentTempImg = null;
+    sendBtn.disabled = false;
+    sendBtn.innerText = "إرسال";
+  }
+
+  function showToast(msg) {
+    toast.innerText = msg;
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 6000);
+  }
 </script>
 </body>
-    </html>
-  
+</html>
